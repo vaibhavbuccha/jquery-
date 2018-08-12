@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <link rel="icon" type="image/xicon" href="https://cdn-images-1.medium.com/max/1600/0*g3ns8QALNBBH7CBA." width="32px" height="32px">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+        </script>
+        <script>
+            /*--toggle of hide and show --*/
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#a").toggle(1000);
+                });
+            });
+            /*--toggle for fading element--*/
+            $(document).ready(function(){
+                $("#fade").click(function(){
+                    $("#b").fadeToggle(1000);
+                });
+            });
+            /*--this is slider--- and callback--*/
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle(5000,function(){
+                        alert("the slide is open.");
+                    });
+                });
+            });
+            /*--this is animation--*/
+            $(document).ready(function(){
+                $("#ani").click(function(){
+                    var div = $('#anim');
+                    div.animate({left: '100px', opacity: '0.4'}, "slow");
+                    div.animate({fontSize: '3em',opacity: '0.8'}, "slow");
+                });
+            });
+            /*--this is stop sliding --*/
+            $(document).ready(function(){
+                $("#fliptwo").click(function(){
+                    $("#paneltwo").slideToggle(5000);
+                });
+                $("#stop").click(function(){
+                    $("#paneltwo").stop();
+                })
+            });
+            /*--chaining--*/
+            $(document).ready(function(){
+                $("#chain").click(function(){
+                    $("#p").css("color","lime")
+                    .slideUp(5000)
+                    .slideDown(5000);
+                });
+            });
+        </script>
+
+        <style>
+            #panel , #flip {
+                padding: 5px;
+                background-color: tomato;
+                color: white;
+                border: solid 1px gray;
+                text-align: center;
+            }
+            #panel{
+                padding: 50px;
+                display: none;
+            }
+            #fliptwo , #paneltwo {
+                padding: 5px;
+                background-color: crimson;
+                color: chartreuse;
+                border: solid 1px chartreuse;
+                text-align: center;
+            }
+            #paneltwo{
+                padding: 60px;
+                display: none;
+            }
+            #p{
+                text-align: center;
+                color:crimson;
+                background-color: darkgrey;
+                letter-spacing: 5px;
+                padding: 5px;
+                margin: 5px;
+                display: none;
+            }
+        </style>
+        
+        </head>
+    </head>
+    <body>
+        <div>
+            <!--hide and show in jquary-->
+            <fieldset>
+                    <h3>about us</h3>
+                    <button id="btn" type="submit">show/hide</button>
+                <legend>this is my basic info.</legend>
+                <textarea id="a" rows="5" cols="60" style="background-color:cornflowerblue">
+                    
+                        #include<stdio.h>
+                                #include<conio.h>
+                                int main()
+                                {
+                                    int a,b,c;
+                                    printf("enter the number");
+                                    scanf("%d %d",&a,&b);
+                                    c=a+b;
+                                    printf("%d",c);
+                                    getch();
+                                    return 0;
+                                }
+                
+                </textarea>
+            </fieldset>
+        </div>
+<div>
+    <fieldset>
+        <legend>this is another part</legend>
+        <h1>this shows how text are fadded</h1>
+        <button id="fade">fade</button>
+        <hr>
+        <p id="b">
+            this is the show how fade the part in jquery.<br>
+            this is the content of the paragraph.<br>
+            this is the new line .
+        </p>
+    </fieldset>
+</div>
+
+<div>
+    <h3 id="flip">click here to down slider</h3>
+    <p id="panel">
+        Are you looking for a free, easy, step-by-step guide
+         on how to start a blog?
+
+            My free guide on this page will show you how 
+            to create a blog that is beautiful 
+            and functional, all in an easy step-by-step
+            tutorial (with pictures).
+    </p>
+</div>
+<button id="ani">start</button>
+<div id="anim" style="background: chartreuse;height: 100px;width: 200px; position: absolute; color: white;">
+vaibhav
+</div>
+<div>
+    <p><br><br><br><br><br></p>
+</div>
+<div>
+    <button id="stop">stop sliding</button>
+    <h3 id="fliptwo">click to show slide</h3>
+    <p id="paneltwo">this is the slide </p>
+</div>
+
+<div>
+    <button id="chain">chain</button>
+    <p id="p">
+            I know that starting a blog can seem overwhelming and intimidating.
+             This free guide is all about blogging for beginners, and will teach you how
+              to be a blogger with just the most basic computer skills. So whether you’re 
+              8 or 88, you can
+             create your own blog in less than 20 minutes.
+
+            I am not ashamed to admit that when I was first learning how to build a
+             blog I made a ton of mistakes. You can benefit from more than a decade of 
+             my experience so that you don’t repeat these same mistakes when you make your
+              own blog. I created this free guide so that anyone can learn how to blog quickly
+               and easily. 
+    </p>
+</div>
+
+    </body>
+</html>
