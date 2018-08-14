@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <link rel="icon" type="image/xicon" href="https://cdn-images-1.medium.com/max/1600/0*g3ns8QALNBBH7CBA." width="32px" height="32px">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+        </script>
+        <script>
+            //this is the use of text(), html(), val(),and attr()......
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    alert("text: "+$("#p1").text());
+                });
+                $("#btn2").click(function(){
+                    alert("text: "+$("#p2").html());
+                });
+                $("#btn3").click(function(){
+                    alert("value: "+$("#p3").val());
+                });
+                $("#btn4").click(function(){
+                    alert("attribute: "+$("#p4").attr("href"));
+                }); 
+            });
+
+            $(document).ready(function(){
+                $('nav').addClass("imp");
+            });
+
+            $(document).ready(function(){
+                $('nav').css("color" ,"tomato");
+            });
+
+        </script>
+        <style>
+        .imp{
+            backdrop-filter: grayscale(100%);
+            background-color: gray;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+           <button id="btn1">show text</button>
+           <button id="btn2">show html</button>
+           <button id="btn3">show value</button>
+           <button id="btn4">show atribute</button>
+           <p id="p1">
+               this is the <b>bold</b> text.
+           </p>
+           <p id="p2">
+               this is the <b>bold</b> text.
+           </p>
+           <p>
+               <input type="text" id="p3" value="vaibhav buccha">
+           </p>
+           <p>
+               <a href="https://www.j3.com" id="p4">j3.com</a>
+           </p>
+        </div>
+        <nav>
+            <p>
+                A blog (a truncation of the expression "weblog")[1] is a discussion or informational 
+                website published on the World Wide Web consisting of discrete, often informal diary-style
+                 text entries ("posts"). Posts are typically displayed in reverse chronological order, so
+                  that the most recent post appears first, at the top of the web page. Until 2009, blogs
+                   were usually the work of a single 
+                individual,[citation needed] occasionally of a small group, and often covered a single 
+                subject or topic. In the 2010s, "multi-author blogs" (MABs) have developed, with posts 
+                written by large numbers of authors and sometimes professionally edited. MABs from 
+                newspapers, other media outlets, universities, think tanks, advocacy groups, and similar
+                 institutions account for an increasing quantity of blog traffic. The rise of Twitter and
+                  other "microblogging" systems helps integrate MABs and single-author blogs into the news
+                   media. Blog can also be used as a verb, meaning to maintain or add content to a blog.
+
+    
+                </p>
+        </nav>
+    </body>
+</html>
